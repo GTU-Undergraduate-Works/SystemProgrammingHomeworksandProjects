@@ -1,7 +1,7 @@
 /*********************************************************************************
  *       HW1_161044086_EFKAN_DURAKLI.c                                           *
  *       System Programming Homework1                                            *
- *		 Author: Efkan Duraklı                                                   *
+ *		 Author: Efkan Duraklı                                           *
  *       Date: 02.03.2017                                                        *
  *-------------------------------------------------------------------------------*
  * Bu program verilen dosya içerisinde verilen kelimeyi arar.Kelime aranırken    *
