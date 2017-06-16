@@ -1,7 +1,7 @@
 /***********THREAD-POOL-SERVER****************************
  *						         *
  *     BIL244 System Programming Final Project           *
- * 				server.c	         *
+ * 				server2.c	         *
  * 			Student Name: Efkan Duraklı      *
  * 			Student ID  : 161044086          *
  * 			Date        : 31/05/2017         *
