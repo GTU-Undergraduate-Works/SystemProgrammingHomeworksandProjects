@@ -10,7 +10,7 @@
  * sayısını ve geçtiği dosya ismini bir log dosyası oluşturarak o dosyaya  *
  * yazar.Toplam geçme sayısını hesaplamak için proseslerin haberleşmesi    *
  * fifoyla sağlanır.                                                       *
- *																		   *
+ *						                           *											   *
  *-------------------------------------------------------------------------*
  */
  #include <stdio.h>
