@@ -1,7 +1,7 @@
 /*****************************************************************************
- *	HW4_161044086_Efkan_Duraklı											     *
- *	System Programming - grepTh using Semaphores and PIPES				     *
- *	Date: 28.04.2017														 *
+ *	HW4_161044086_Efkan_Duraklı					     *					     *
+ *	System Programming - grepTh using Semaphores and PIPES	             *
+ *	Date: 28.04.2017						     *								 *
  *****************************************************************************/
 
 #include <stdio.h>
