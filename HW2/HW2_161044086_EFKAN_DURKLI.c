@@ -1,7 +1,7 @@
 /*********************************************************************************
  *       HW2_161044086_EFKAN_DURAKLI.c                                           *
  *       System Programming Homework1                                            *
- *		 Author: Efkan Duraklı                                                   *
+ *		 Author: Efkan Duraklı                                           *
  *       Date: 09.03.2017                                                        *
  *-------------------------------------------------------------------------------*
  * Bu program verilen path içerisinde bulunan txt dosyalarında verilen kelimeyi  *
