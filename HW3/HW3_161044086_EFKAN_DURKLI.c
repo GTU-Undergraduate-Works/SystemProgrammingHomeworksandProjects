@@ -133,12 +133,12 @@ int searchInDirectory(const char *pathName, const char *string, int fdLog) {
 	}
 	chdir(pathName);
 	while ((direntp = readdir(dirp)) != NULL) {
-    	if(strcmp(direntp->d_name, "..") != 0 && strcmp(direntp->d_name, ".") != 0) {
-      		if (isRegularFile(direntp->d_name)) 
-      			fileFlag = 1;
-    		if (isDirectory(direntp->d_name)) 
-        		dirFlag = 1;
-      	}
+    		if(strcmp(direntp->d_name, "..") != 0 && strcmp(direntp->d_name, ".") != 0) {
+      			if (isRegularFile(direntp->d_name)) 
+      				fileFlag = 1;
+    			if (isDirectory(direntp->d_name)) 
+        			dirFlag = 1;
+      		}
   	}
   	/* pathin içinde file varsa pipe oluşturulur */
   	if (fileFlag) {
