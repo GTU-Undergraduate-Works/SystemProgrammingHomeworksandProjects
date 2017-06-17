@@ -1,11 +1,11 @@
 /*------------NUMERICAL METHODS LIBRARY----------------------------------------*/
 /*                                                                             */
-/*	Author:Efkan DURAKLI                                                       */
-/*	Date:31/05/2017                                                            */
+/*	Author:Efkan DURAKLI                                                   */
+/*	Date:31/05/2017                                                        */
 /*                                                                             */
 /* Bu kütüphanedeki fonksiyonlardan bazıları Numericial Recipies in C          */
 /* kitabından ufak değişiklikler yapılarak alınmıştır.                         */
-/* Kaynaklar aşağıdadır.                                        			   */
+/* Kaynaklar aşağıdadır.                                        	       */
 /*                                                                             */
 /* References:                                                                 */
 /*  1- Numerical Recipes in C (The Art of Scientific Computing Second Edition) */
