@@ -68,7 +68,7 @@ ssize_t r_read(int fd, void *buf, size_t size);
  * Parametreleri: 
  *		fileName: kelimenin aranacağı dosyanın ismi
  *		string  : dosya içerisinde aranacak kelime
- *      logFile : outputun yazılacağı log dosyasının ismi
+ *              logFile : outputun yazılacağı log dosyasının ismi
  * Return değeri: kelimenin dosyada kaç kez geçtiğini return eder.
  *                 hata durumlarında -1 return eder.
  */
