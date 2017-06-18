@@ -81,7 +81,7 @@ int searchInFile(const char *fileName, const char *string, int fdLog);
  * Kelimenin pathdeki bütün dosyalarda geçme sayısı pipe ve fifo kullanılarak
  * bulunur.
  * Parametreleri:
- *			pathName: stringin aranacağı pathin adı.
+ *	    pathName: stringin aranacağı pathin adı.
  *          string  : directoryler içerisinde aranacak string.
  *          logFile : Outputun yazılacağı log dosyasının adı.
  * Return değeri: Bütün dosya ve klasörlerde kelimenin toplam bulunma sayısını return eder.
