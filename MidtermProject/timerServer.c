@@ -153,10 +153,10 @@ int main(int argc, char *argv[]) {
   	for ( ; ; ) {
 
 		r_read(serverFd, &clientPid, sizeof(pid_t));
-    	sprintf(clientFifoName, "%ld.fifo", (long)clientPid);
-    	if ((clientFd = open(clientFifoName, O_WRONLY)) == -1) {
-    		perror("Server failed to open clients FIFO");
-    		return 1;
+    		sprintf(clientFifoName, "%ld.fifo", (long)clientPid);
+    		if ((clientFd = open(clientFifoName, O_WRONLY)) == -1) {
+    			perror("Server failed to open clients FIFO");
+    			return 1;
   		}
 
   		if (clientPid > 0 && flag == 1) {
@@ -200,13 +200,13 @@ int main(int argc, char *argv[]) {
 
   			} else {
 
-    			clientPids[numberOfClient] = clientPid;
-    			++numberOfClient;
+    				clientPids[numberOfClient] = clientPid;
+    				++numberOfClient;
 			}
 		}
 		sigprocmask(SIG_BLOCK, &act1.sa_mask, NULL);
-    	usleep(miliseconds);
-    	sigprocmask(SIG_UNBLOCK, &act1.sa_mask, NULL);
+    		usleep(miliseconds);
+    		sigprocmask(SIG_UNBLOCK, &act1.sa_mask, NULL);
 
   	}
 }
