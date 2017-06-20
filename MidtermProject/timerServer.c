@@ -141,12 +141,12 @@ int main(int argc, char *argv[]) {
   		return 1;
   	}
   	if ((mkfifo(mainpipename, FIFO_PERMS) == -1) && (errno != EEXIST)) {
-    	perror("Server failed to create a FIFO");
-    	return 1;
+    		perror("Server failed to create a FIFO");
+    		return 1;
   	} 	
   	if ((serverFd = open(mainpipename, O_RDONLY)) == -1) {
-    	perror("Server failed to open its FIFO");
-    	return 1;
+    		perror("Server failed to open its FIFO");
+    		return 1;
   	}
 
   	/* program dışarıdan bir sinyal tarafından sonlandırılmadıkça yaşamaya devam eder.*/
@@ -172,30 +172,30 @@ int main(int argc, char *argv[]) {
   				isParent = 0;
     			
 
-    			while (flag) {
+				while (flag) {
 
-    				gettimeofday(&start, NULL);
-    				createRandomMatrix(arr, size);
-    				gettimeofday(&end, NULL);
-    				timedif = 1000*(end.tv_sec - start.tv_sec) +
-								   (end.tv_usec - start.tv_usec)/1000.0;
-    				determinat = determinantOfMatrix(arr, size);
-    				sprintf(str, "%d X %d matrix is generated at %ld miliseconds.\n",size, size, timedif);
-    				r_write(fdLog, str, (int)strlen(str)*sizeof(char));
-    				sprintf(str, "Pid of Client %d = %ld\n", numberOfClient+1, (long)clientPid);
-    				r_write(fdLog, str, (int)strlen(str)*sizeof(char));
-    				sprintf(str, "Determinant of matrix = %f\n\n", determinat);
-    				r_write(fdLog, str, (int)strlen(str)*sizeof(char));
-    				for (i = 0; i < size; i++) {
-    					for (j = 0; j < size; j++)
-    						r_write(clientFd, &arr[i][j], sizeof(double));
-    				}
-    				/* milisaniye değeri küçük girildiğinde server çok fazla matris
-    				  üretmesin diye burada 3 saniye programı uyutuyorum*/
-    				sleep(3);
-    				sigprocmask(SIG_BLOCK, &act1.sa_mask, NULL);
-    				usleep(miliseconds);
-    				sigprocmask(SIG_UNBLOCK, &act1.sa_mask, NULL);
+					gettimeofday(&start, NULL);
+					createRandomMatrix(arr, size);
+					gettimeofday(&end, NULL);
+					timedif = 1000*(end.tv_sec - start.tv_sec) +
+									   (end.tv_usec - start.tv_usec)/1000.0;
+					determinat = determinantOfMatrix(arr, size);
+					sprintf(str, "%d X %d matrix is generated at %ld miliseconds.\n",size, size, timedif);
+					r_write(fdLog, str, (int)strlen(str)*sizeof(char));
+					sprintf(str, "Pid of Client %d = %ld\n", numberOfClient+1, (long)clientPid);
+					r_write(fdLog, str, (int)strlen(str)*sizeof(char));
+					sprintf(str, "Determinant of matrix = %f\n\n", determinat);
+					r_write(fdLog, str, (int)strlen(str)*sizeof(char));
+					for (i = 0; i < size; i++) {
+						for (j = 0; j < size; j++)
+							r_write(clientFd, &arr[i][j], sizeof(double));
+					}
+					/* milisaniye değeri küçük girildiğinde server çok fazla matris
+					  üretmesin diye burada 3 saniye programı uyutuyorum*/
+					sleep(3);
+					sigprocmask(SIG_BLOCK, &act1.sa_mask, NULL);
+					usleep(miliseconds);
+					sigprocmask(SIG_UNBLOCK, &act1.sa_mask, NULL);
 				}
 
   			} else {
