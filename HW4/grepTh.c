@@ -1,5 +1,5 @@
 /*****************************************************************************
- *	HW4_161044086_Efkan_Duraklı					     *					     *
+ *	HW4_161044086_Efkan_Duraklı					     *					     
  *	System Programming - grepTh using Semaphores and PIPES	             *
  *	Date: 28.04.2017						     *								 *
  *****************************************************************************/
@@ -177,7 +177,7 @@ int searchInDirectory(const char *pathName, const char *string) {
 	threadParams_t thread[256] ;
 	pthread_t tids[256];
 	pthread_t temptid = 0;
-	char str[25];
+	char str[100];
 
 	/* global total structın initialize edilmesi */
 	total.totalOccurence = 0;
