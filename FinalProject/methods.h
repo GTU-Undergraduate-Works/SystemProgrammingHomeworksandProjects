@@ -53,13 +53,13 @@ void SingularValueDecomposition(double a[][MAXSIZE], int m, int n, double w[], d
 
 void solveWithSvd(double u[][MAXSIZE], double w[], double v[][MAXSIZE], int m, int n, double b[], double x[]);
 
-double calculateErrorNorm(double a[][MAXSIZE], double x[], double b[], int m, int n); // tamam
+double calculateErrorNorm(double a[][MAXSIZE], double x[], double b[], int m, int n); 
 
-double averageConnectionTime(int a[], int n); // tamam
+double averageConnectionTime(int a[], int n); 
 
 double calculateStandardDeviation(int a[], double average, int n);
 
-void createRandomMatrices(double a[][MAXSIZE], double b[], int m, int n); // tamam
+void createRandomMatrices(double a[][MAXSIZE], double b[], int m, int n); 
 
 void rsolv(double a[][MAXSIZE], int n, double d[], double b[]);
 
