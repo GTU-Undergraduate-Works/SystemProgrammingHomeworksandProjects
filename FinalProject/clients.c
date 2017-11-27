@@ -45,8 +45,8 @@ int connectionTime[1000];
 
 int main(int argc, char const *argv[]) {
 
-	int numberOfThreads = 0;
-	int i = 0;
+   int numberOfThreads = 0;
+   int i = 0;
    int error = 0;
    int row = 0;
    int column = 0;
@@ -84,7 +84,7 @@ int main(int argc, char const *argv[]) {
    /* semaforun initialize edilmesi */
    sem_init(&sem, 0, 1);
    /* client threadlar oluşturulur.*/
-	for (i = 0; i < numberOfThreads; i++) {
+   for (i = 0; i < numberOfThreads; i++) {
       thread[i].counter = i+1;
       thread[i].portnumber = portnumber;
       strcpy(thread[i].hostname,hostname);
