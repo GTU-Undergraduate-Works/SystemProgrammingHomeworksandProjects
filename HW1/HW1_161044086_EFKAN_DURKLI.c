@@ -27,7 +27,7 @@ int main(int argc, const char *argv[]) {
 		return -1;
 	}
 	if (-1 != (totalOccurence = seacrchInFile(argv[2], argv[1])))
-		fprintf(stderr, "Total %d '%s' found\n", totalOccurence, argv[1]);
+		fprintf(stdout, "Total %d '%s' found\n", totalOccurence, argv[1]);
 	return 0;
 }
 
