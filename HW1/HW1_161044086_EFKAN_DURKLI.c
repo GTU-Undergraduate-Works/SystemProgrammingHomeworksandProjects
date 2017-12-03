@@ -22,7 +22,6 @@ int seacrchInFile(const char *fileName, const char *string);
 int main(int argc, const char *argv[]) {
 
 	int totalOccurence;
-
 	if (argc != 3) {	/* check for valid number of command-line arguments */
 		fprintf(stderr, "Usage: %s string filename\n", argv[0]);
 		return -1;
@@ -56,7 +55,6 @@ int seacrchInFile(const char *fileName, const char *string) {
 	if (NULL == (filePointer = fopen(fileName, "r"))) {
 		fprintf(stderr, "File <%s> not found in directory\n", fileName);
 		return -1;
-	
 	}
 	/* dosyanın içeriği karakter karakter okunur. */
 	for (ch = fgetc(filePointer); ch != EOF; ch = fgetc(filePointer)) { 
@@ -78,7 +76,7 @@ int seacrchInFile(const char *fileName, const char *string) {
 		}
 		/* kontrol edilen karakterler stringin boyuna eşitse kelimenin ilk harfinin bulunduğu konum ekrana yazdırlır.*/
 		if (i == strlen(string)) { 
-			fprintf(stderr, "'%s' found in [%d,%d]\n", string, rowNumber, columnNUmber); 
+			fprintf(stdout, "'%s' found in [%d,%d]\n", string, rowNumber, columnNUmber); 
 			++totalOccurence;   
 		}
 		/* araramaya devam etmek için kalınan yere geri götürür.*/
